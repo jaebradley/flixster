@@ -12,7 +12,7 @@ class FlixsterClient:
         super().__init__()
 
     @staticmethod
-    def get_geographic_information(self):
+    def get_geolocation_information():
         r = requests.get(url="{BASE_V1_URL}/geoip".format(BASE_V1_URL=FlixsterClient.BASE_V1_URL))
 
         r.raise_for_status()
@@ -23,7 +23,8 @@ class FlixsterClient:
     def get_theater_information(query):
         query_parameters = TheaterInformationQueryParameterBuilder.build(query)
 
-        r = requests.get(url="{BASE_V2_URL}/ticketing/theaters", params=query_parameters)
+        r = requests.get(url="{BASE_V2_URL}/ticketing/theaters".format(BASE_V2_URL=FlixsterClient.BASE_V2_URL),
+                         params=query_parameters)
 
         r.raise_for_status()
 
