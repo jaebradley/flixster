@@ -3,7 +3,7 @@ setup(
   name="flixster",
   packages=find_packages(exclude=["tests*"]),
   install_requires=["requests"],
-  version="0.0.1",
+  version="0.0.2",
   description="Flixster Client",
   author="Jae Bradley",
   author_email="jae.b.bradley@gmail.com",

@@ -29,3 +29,9 @@ class FlixsterClientIntegrationTest(TestCase):
         self.assertTrue("theaterGroups" in theater_information)
         self.assertTrue("theaters" in theater_information)
         self.assertTrue("traits" in theater_information)
+
+    def test_search(self):
+        search_results = FlixsterClient.search(term="Harry Potter")
+        self.assertIsNotNone(search_results)
+        self.assertTrue("celebs" in search_results)
+        self.assertTrue("movies" in search_results)

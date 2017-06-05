@@ -1,4 +1,10 @@
 from datetime import date
+from enum import Enum
+
+
+class SearchType(Enum):
+    ANY = "any"
+    MOVIES = "movies"
 
 
 class TheaterInformationQuery:
