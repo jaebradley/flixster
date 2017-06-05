@@ -23,7 +23,7 @@ class TestQueryParameterBuilder(TestCase):
             "deviceType": TheaterInformationQueryParameterBuilder.ROTTEN_TOMATOES_CODE,
             "fullMovieInfo": self.return_complete_movie_info,
             "limit": self.limit,
-            "showTimes": self.return_show_times,
+            "showtimes": self.return_show_times,
             "vanityPlatform": TheaterInformationQueryParameterBuilder.ROTTEN_TOMATOES_CODE
         }
 
